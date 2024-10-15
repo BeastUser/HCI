@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 255, 0.8),
+    rgba(0, 255, 255, 0.8)
+  );
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  background-color: #1e3c72;
+  background-image: linear-gradient(147deg, #2f80ed 0%, #56ccf2 100%);
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: #183992;
+  transition: width 0.4s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #183992;
+  transform: scale(1.05);
+}
+
+.container {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+}
+
+.assignments-title {
+  text-align: center;
+  padding: 50px 20px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.6)
+  );
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.assignments-title h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(45deg, #ff6b6b, #f06595, #8fd3f4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slide-in 0.5s ease forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding: 25px;
+  margin-left: 210px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+  border-color: #8fd3f4;
+  background-color: #f7faff;
+}
+
+.card-image {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card-image:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #444;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #ff6b6b;
+}
+
+#assignments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #fffefe;
+  padding: 10px;
+  text-align: center;
+  color: #000000;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #039fec;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff6b6b;
+}
+
+/* Custom CSS for centering the team table vertically and horizontally */
+/* Custom CSS for centering the team table vertically and horizontally */
+.team-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 255, 0.8),
+    rgba(0, 255, 255, 0.8)
+  );
+}
+
+.team-section table {
+  align-content: center;
+  justify-content: center;
+  margin: 50px auto;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  table-layout: auto;
+  width: 100%;  /* Increased table width */
+  max-width: 1200px;  /* Ensures table doesn’t get too wide on large screens */
+}
+
+.team-section th,
+.team-section td {
+  border: none;
+  padding: 20px 25px;  /* Increased padding for larger cells */
+  text-align: left;
+  white-space: nowrap;
+  font-size: 1.2rem;  /* Increased font size for readability */
+  color: #333;
+}
+
+.team-section th {
+  font-weight: bold;
+  background-color: #4a90e2;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.3rem;  /* Larger font size for the header */
+}
+
+.team-section td {
+  background-color: #f9f9f9;
+}
+
+.team-section tbody tr:nth-child(even) td {
+  background-color: #f0f4f8;
+}
+
+.team-section tbody tr:hover td {
+  background-color: #d1e8ff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.team-section table caption {
+  font-size: 2rem;  /* Larger caption size */
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.team-section td:first-child,
+.team-section th:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.team-section td:last-child,
+.team-section th:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+
+/* Custom CSS for the project overview section */
+#project-overview {
+  margin-top: 14px;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
+  line-height: 1.6;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#project-overview h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2f80ed;
+  text-align: center;
+}
+
+#project-overview h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 0px;
+  color: #183992;
+}
+
+#project-overview p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#project-overview ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+#project-overview ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+#project-overview ul li::marker {
+  color: #2f80ed;
+}
+
+#project-overview ul li:hover {
+  color: #ff6b6b;
+}
